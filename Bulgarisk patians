@@ -1,18 +1,17 @@
 //---------------------------------------DEFINITIONER---------------------------------------//
 
-//let choice = prompt("Vill du välja högar och mängd kort eller spela slumpmässit? (välja/slumpmässigt)")
 let cards = Math.round(Math.random()* 52)
 let listOfCards = [];
 let counter = 0;
 let list1 = [];
 let listWithLists = []
-trueOrFalse = false
-
 
 //---------------------------------------FUNKTIONER---------------------------------------//
 
-function firstStack () {
-    //if (choice == random) {
+function randomStack() {
+    listOfCards = []
+    trueOrFalse = false
+    let cards = Math.round(Math.random()* 52)
     while (cards > 0) {
         i = Math.round(Math.random()* cards) + 1;
         listOfCards.push(i);
@@ -23,8 +22,15 @@ function firstStack () {
     });
     listWithLists.push(listOfCards)
     console.log(listOfCards)
-    //}
-    //else (listOfCards == prompt("Hur många kort vill du ..."))
+}
+
+function ownInput() {
+    trueOrFalse = false
+    txt1 = document.getElementById("lista")
+    listOfCards = txt1.value.split(",")
+    listWithLists.push(listOfCards)
+    console.log(listOfCards)
+
 }
 
 function nextStack() {
@@ -54,18 +60,14 @@ function nextStack() {
         console.log("Patiansen har upprepats och kan därför inte gå ut. Upptäckt efter " + counter + " drag.")
         trueOrFalse = true
     }
-    else if (counter == 25) {
-        console.log("Du har gjort 25 drag och patiansen betraktas inte kunna lösas.")
-    }
 
     listWithLists.push(listOfCards)
 }
 
+function skip() {
+    while (listOfCards.toString() != list1.toString() && trueOrFalse == false) {
+        nextStack()
+    }
+}
 
 //----------------------------------------------MAIN PROGRAM----------------------------------------------//
-
-firstStack()
-
-while (listOfCards.toString() != list1.toString() && counter < 25 && trueOrFalse == false) {
-    nextStack()
-}
