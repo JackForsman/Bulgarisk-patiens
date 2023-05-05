@@ -1,0 +1,9 @@
+body {
+    background: radial-gradient(rgb(0, 100, 0), rgb(0, 45, 0));
+    background-attachment: fixed;
+}
+
+img.animated-gif {
+    width: 120px;
+    height: auto;
+}
