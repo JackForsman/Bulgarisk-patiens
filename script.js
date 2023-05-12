@@ -33,9 +33,8 @@ function ownInput() {
     let txt1List = []
     txt1 = document.getElementById("lista")
     txt1List = txt1.value.split(",")
-    console.log(txt1List)
     for (let i = 0; i < txt1List.length; i++) {
-        sum += txt1List[i]
+        sum += Number(txt1List[i])
     }
     console.log(sum)
     if (sum > 52) {
