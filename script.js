@@ -5,8 +5,8 @@ let listOfCards = [];
 let counter = 0;
 let list1 = [];
 let listWithLists = []
-
 //---------------------------------------FUNKTIONER---------------------------------------//
+
 
 function randomStack() {
     document.getElementById("submit").disabled = false
@@ -73,6 +73,9 @@ function nextStack() {
         document.getElementById("continue").disabled = true
         document.getElementById("submit").disabled = false
         console.log("Två drag upprepade sig efter varandra och patiansen gick ut. Grattis! Upptäckt efter " + counter + " drag.")
+        document.getElementById("text").innerText = "Två drag upprepade sig efter varandra och patiansen gick ut. Grattis! Upptäckt efter " + counter + " drag."
+        var paragraph = document.getElementById("text");
+        paragraph.classList.toggle("highlight");
         listWithLists = []
         counter = 0
     }
@@ -82,6 +85,9 @@ function nextStack() {
         document.getElementById("submit").disabled = false
         counter += 1
         console.log("Patiansen har upprepats och kan därför inte gå ut. Upptäckt efter " + counter + " drag.")
+        document.getElementById("text").innerText = "Patiansen har upprepats och kan därför inte gå ut. Upptäckt efter " + counter + " drag." 
+        var paragraph = document.getElementById("text");
+        paragraph.classList.toggle("highlight");
         trueOrFalse = true
         listWithLists = []
         counter = 0
@@ -102,6 +108,10 @@ function reset() {
     list1 = []
     counter = 0
     document.getElementById("lista").value = " "
+    document.getElementById("text").innerText = ""
+    console.clear()
+    var paragraph = document.getElementById("text");
+    paragraph.classList.remove("highlight");
 }
 
 function textChange() {
