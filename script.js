@@ -36,7 +36,6 @@ function ownInput() {
     for (let i = 0; i < txt1List.length; i++) {
         sum += Number(txt1List[i])
     }
-    console.log(sum)
     if (sum > 52) {
         console.log("Du kan inte använda fler än 52 kort.")
     }
