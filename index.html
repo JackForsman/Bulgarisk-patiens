@@ -1,35 +1,29 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bulgarisk patiens</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="TabIcon.jpg">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulgarisk patiens</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="TabIcon.jpg">
+</head>
 
-    <body>                                                                        <!-- Organisera submits så att de ligger tillsammans i passander kategorier-->
-        <script src="script.js"></script>
-        <label for="a">Välj egna kort: </label> 
+<body>                                                                        <!-- Organisera submits så att de ligger tillsammans i passander kategorier-->
+    <script src="script.js"></script>
 
-        <input type="text" placeholder="ex. 1,5,2..." id="lista" onchange="textChange()">
-        <input type="button" id="submit" onclick="ownInput()" value="Submit">
+    <input type="text" placeholder="ex. 1,5,2..." id="lista" onchange="textChange()" class="button">
+    <input type="button" id="submit" onclick="ownInput()" value="Submit" class="button">
 
-        <input type="button" onclick="randomStack()" value="Randomize">            <!-- Direkt börja om och skicka in random funktionen -->
-        
-        
-                                                                            <!-- Välja att skicka in det man skrivit -->
-        <input type="button" onclick="nextStack()" value="Continue" id="continue">                                    <!-- Köra nästa stack, men kan inte köra "nextStack" då den använder en forloop som kör allt på en gång -->
-        <input type="button" onclick="skip()" value="Skip" id="skip">                                        <!-- För att kunna köra igenom hela skiten för tills nåt händer -->
-        <input type="button" value="Reset" onclick="reset()">                                       <!-- Göra nåt med att det först blir "" alltså ingenting, sen nån sekund senare, händer "onclick". -->
-        <br>
-
-        <img class="animated-gif" src="card.gif">
-
-        <div class="flex-container">
-        </div>1<div>
-        </div>2<div>
-        </div>3<div>
-    </body>
-    </html>
+    <input type="button" onclick="randomStack()" value="Randomize" class="button">            <!-- Direkt börja om och skicka in random funktionen -->
+    
+    
+    
+                                                                        <!-- Välja att skicka in det man skrivit -->
+    <input type="button" onclick="nextStack()" value="Continue" id="continue" class="button">                                    <!-- Köra nästa stack, men kan inte köra "nextStack" då den använder en forloop som kör allt på en gång -->
+    <input type="button" onclick="skip()" value="Skip" id="skip" class="button">                                        <!-- För att kunna köra igenom hela skiten för tills nåt händer -->
+    <input type="button" value="Reset" onclick="reset()" class="button">                                       <!-- Göra nåt med att det först blir "" alltså ingenting, sen nån sekund senare, händer "onclick". -->
+    <br>
+    <p id="text"></p>   
+</body>
+</html>
