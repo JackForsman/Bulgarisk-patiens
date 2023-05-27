@@ -41,10 +41,11 @@ function ownInput() {
     }
     else {
         listOfCards = txt1List
+        
+        listWithLists.push(listOfCards)
         listOfCards = listOfCards.sort(function(a, b) {
             return a - b;
         });
-        listWithLists.push(listOfCards)
         console.log(listOfCards)
     }
 }
