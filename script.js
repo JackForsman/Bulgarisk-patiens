@@ -33,6 +33,9 @@ function ownInput() {
     let txt1List = []
     txt1 = document.getElementById("lista")
     txt1List = txt1.value.split(",")
+    for (let i = 0; i < txt1List.length ;i++) {
+        txt1List[i] = Number(txt1List[i])
+    }
     for (let i = 0; i < txt1List.length; i++) {
         sum += Number(txt1List[i])
     }
